@@ -1,0 +1,31 @@
+div{
+    background-color: rgb(223, 244, 249);
+  }
+  
+  nav {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  nav a {
+    padding: 0.5rem;
+    text-decoration: none;
+    color: black;
+    /* border: 1px solid #6bc5f2; */
+    border-radius: 0.25rem;
+    margin-right: 1rem;
+  }
+  
+  nav a:hover {
+    background-color: #6bc5f2;
+    color: #fff;
+  }
+  nav a.active{
+    background-color: #6bc5f2;
+    color: #fff;
+  }
+  
+  
+  

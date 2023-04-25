@@ -1,0 +1,57 @@
+<!-- <div  >
+  Edit product
+</div>
+
+  <div >
+      <label>workout_Date</label>
+      <input type="date" placeholder="Enter product name"
+      [(ngModel)]="workout_Date" required>
+  </div>
+  <div >
+    <label>steps</label>
+    <input  type="number" 
+     placeholder="Enter price" [(ngModel)]="steps"  required>
+  </div>
+  <label>distance_km</label>
+  <div >
+    <input type="number" [(ngModel)]="distance_km" placeholder="Enter Description" required>
+  </div>
+  <div >
+    <label>caloriesBurned</label>
+    <input [(ngModel)]="caloriesBurned" type="number" placeholder="Enter image URL" required>
+  </div>
+  <div >
+    <label>heartRate</label>
+    <input [(ngModel)]="heartRate" type="number" placeholder="Enter Quantity" required>
+  </div>
+
+  <div >
+    <label>sleepDuration</label>
+    <input [(ngModel)]="sleepDuration" type="number" placeholder="Enter Quantity" required>
+  </div>
+  <button id="submitButton" (click)="submitForm()">Edit</button>
+ -->
+
+ <div class="form">
+    <label style="font-size:25px; margin-top: 10px; margin-bottom: 15px;">Enter your daily activity to track your fitness</label>
+    <label for="workout_Date">Workout Date:</label>
+    <input   [(ngModel)]="workout_Date" type="date" id="workout_Date" >
+    
+    <label for="steps">Steps:</label>
+    <input  [(ngModel)]="steps" type="number" id="steps" >
+    
+    <label for="distance_km">Distance (km):</label>
+    <input [(ngModel)]="distance_km"  type="number" id="distance_km" >
+    
+    <label for="caloriesBurned">Calories Burned:</label>
+    <input [(ngModel)]="caloriesBurned" type="number" id="caloriesBurned" >
+    
+    <label for="heartRate">Heart Rate:</label>
+    <input [(ngModel)]="heartRate" type="number" id="heartRate" >
+    
+    <label for="sleepDuration">Sleep Duration:</label>
+    <input [(ngModel)]="sleepDuration" type="number" id="sleepDuration" >
+    
+    <button type="submit" (click)="submitForm()">Submit</button>
+ 
+  </div>

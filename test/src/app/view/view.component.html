@@ -1,0 +1,114 @@
+
+
+    <div style="margin-top: 30px">
+<div style=" display: table;margin: 0 auto;
+padding: 20px;">
+      <input [(ngModel)]="s_id" type="number" name="search" id="search" placeholder="search By ID">
+      <button type="submit" (click)="searchId()" id="searchbtn" >Search</button></div>
+      <ng-container *ngIf="search==1" >
+        <div style="display: flex;
+        justify-content: center;"><h1>No result found</h1></div>
+      </ng-container>
+
+      <ng-container *ngIf="showTable1 == 0">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Workout date</th>
+            <th>Steps</th>
+            <th>Distance in Km</th>
+            <th>Calories</th>
+            <th>HeartRate</th>
+            <th>SleepDuration</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <app-view-list
+          *ngFor = "let prd of details;"
+          [deta] = "prd"
+        ></app-view-list> -->
+        <tr *ngFor="let deta of details">
+          <td>{{deta.id}}</td>
+          <td>{{deta.workout_Date}}</td>
+          <td>{{deta.steps}}</td>
+          <td>{{deta.distance_km}}</td>
+          <td>{{deta.caloriesBurned}}</td>
+          <td>{{deta.heartRate}}</td>
+          <td>{{deta.sleepDuration}}</td>
+          <td style="margin-right: 10px;"><a routerLink="/edit/{{deta.id}}" id="edit" (click)="setId(deta.id)"  class="btn btn-warning text-white" style="color: blue;text-decoration: none;" >
+            edit</a> | <a style="color: red;text-decoration: none;cursor: pointer;" id="delete" (click)="deleteconfirm(deta.id)">
+              delete</a>
+              <!-- <button (click)="showConfirmation = true">Delete</button> -->
+            </td>
+
+
+
+
+            <div class="confirmation-dialog" *ngIf="showConfirmation">
+              <p>Are you sure you want to delete?</p>
+              <button (click)="deleteId(deta.id)">Yes</button>
+              <button (click)="showConfirmation = false">Cancel</button>
+            </div>
+              
+              
+
+
+        </tr>
+    </tbody>
+      </table>
+    </ng-container>
+
+    <ng-container *ngIf="showTable1 == 1">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Workout date</th>
+            <th>Steps</th>
+            <th>Distance in Km</th>
+            <th>Calories</th>
+            <th>HeartRate</th>
+            <th>SleepDuration</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <app-view-list
+          *ngFor = "let prd of details;"
+          [deta] = "prd"
+        ></app-view-list> -->
+        <tr >
+          <td>{{detail.id}}</td>
+          <td>{{detail.workout_Date}}</td>
+          <td>{{detail.steps}}</td>
+          <td>{{detail.distance_km}}</td>
+          <td>{{detail.caloriesBurned}}</td>
+          <td>{{detail.heartRate}}</td>
+          <td>{{detail.sleepDuration}}</td>
+          <td style="margin-right: 10px;"><a routerLink="/edit/{{detail.id}}" (click)="setId(detail.id)"  class="btn btn-warning text-white" style="color: blue;text-decoration: none;" >
+            edit</a> | <a style="color: red; text-decoration: none;cursor: pointer;"  (click)="deleteconfirm(detail.id)">
+              delete</a>
+              <!-- <button (click)="showConfirmation = true">Delete</button> -->
+            </td>
+
+
+
+
+            <div class="confirmation-dialog" *ngIf="showConfirmation">
+              <p>Are you sure you want to delete?</p>
+              <button (click)="deleteId(detail.id)">Yes</button>
+              <button (click)="showConfirmation = false">Cancel</button>
+            </div>
+              
+              
+
+
+        </tr>
+    </tbody>
+      </table>
+      <button type="submit" style="width: 20%;margin-top: 10px;display: flex;justify-content: center;" (click)="showTable1=0">Back to All</button>
+    </ng-container>   
+      
+    </div>

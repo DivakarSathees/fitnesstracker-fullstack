@@ -1,0 +1,68 @@
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  th, td {
+    border: 1px solid #6bc5f2;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #6bc5f2;
+    font-weight: bold;
+    /* text-align: center; */
+  }
+  
+  tr:nth-child(even) {
+    background-color: #d3f0ff;
+  }
+  
+  .confirmation {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .confirmation-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
+  }
+
+  input[type="number"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: auto;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #6bc5f2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: auto;
+    width: 30%;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #00aaff;
+  }
+  

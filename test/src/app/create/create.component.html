@@ -1,0 +1,23 @@
+<form  #myForm="ngForm" (ngSubmit)="adddetails(myForm,workout_Date.value,steps.value,distance_km.value,caloriesBurned.value, heartRate.value, sleepDuration.value);myForm.reset()">
+    <label style="font-size:25px; margin-top: 10px; margin-bottom: 15px;">Enter your daily activity to track your fitness</label>
+    <label for="workout_Date">Workout Date:</label>
+    <input #workout_Date type="date" id="workout_Date" >
+    
+    <label for="steps">Steps:</label>
+    <input #steps type="number" id="steps" >
+    
+    <label for="distance_km">Distance (km):</label>
+    <input #distance_km type="number" id="distance_km" >
+    
+    <label for="caloriesBurned">Calories Burned:</label>
+    <input #caloriesBurned type="number" id="caloriesBurned" >
+    
+    <label for="heartRate">Heart Rate:</label>
+    <input #heartRate type="number" id="heartRate" >
+    
+    <label for="sleepDuration">Sleep Duration:</label>
+    <input #sleepDuration type="number" id="sleepDuration" >
+    
+    <button type="submit" id="submit">Submit</button>
+  </form>
+  
